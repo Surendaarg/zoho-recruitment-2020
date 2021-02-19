@@ -1,0 +1,33 @@
+public class Printing {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	
+		//Scanner sc = new Scanner(System.in);
+		
+		String str= "WELCOME";
+		
+		print(str);
+	}
+
+	private static void print(String str) {
+		// TODO Auto-generated method stub
+		String temp="";
+		int n=str.length();
+		int index=n/2;
+		for(int i=0; i<n; i++) {
+			space(str.length(), i+1);
+			temp+=str.charAt(index);
+		//	temp+=" ";
+			System.out.println(temp);
+			index=(index+1)%n;
+		}
+	}
+	
+	private static void space(int num, int i) {
+		// TODO Auto-generated method stub
+		for(int m=i; m<num; m++)
+			System.out.print(" ");
+	}
+
+}
